@@ -17,13 +17,15 @@ You can validate if your classes.dex file stores this hidden jar file by executi
 
 ```sh
 ./validateDEX.sh <DEX-filename>
+# or on Windows
+./validateDEX.bat <DEX-filename>
 ```
 
-A Windows version of this small script will be added soon. This small project can be used in your app if you doesn't want
-that any other library should load the hidden JAR-File. Usage:
+This small project can be used in your app if you don't want that any other library should load the hidden JAR-File. 
+Usage:
 ```java
 import io.github.matrixeditor.shjar.ShadowJar;
-
+ 
 Shadowjar.ensureNoHiddenJar(context, () -> Toast.makeText(context, "JAR is loaded"));
 ```
 
